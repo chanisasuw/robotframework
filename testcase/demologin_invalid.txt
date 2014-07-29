@@ -1,0 +1,30 @@
+*** Settings ***
+Library    Selenium2Library
+Resource    ./resource/demo_login_resource.txt
+
+*** Variables ***
+
+
+*** Testcases ***
+Invalid login
+	[Template]	Validate login system
+	#-------------------------------#
+	#    Username   |  Password     #
+	#-------------------------------#
+	      invalid        mode
+	      demo           invalid
+	      invalid        invalid
+	      ${EMPTY}       ${EMPTY}
+	      demoE          modeso
+
+*** Keywords ***
+Validate login system
+	[Arguments]    ${username}    ${password}
+ 	Go to login page
+	Fill in data login    ${username}    ${password}
+	Expected login not successfully
+	Close Browser
+
+Expected login not successfully
+    Page Should Not Contain    Welcome Page
+    Page Should Not Contain Link   logout

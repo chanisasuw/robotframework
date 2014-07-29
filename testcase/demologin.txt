@@ -1,0 +1,18 @@
+*** Settings ***
+Library    Selenium2Library
+Test Teardown    Close Browser
+Resource    ./resource/demo_login_resource.txt
+
+*** Variables ***
+
+
+*** Testcases ***
+Login to website
+	Go to login page
+	Fill in data login  demo  mode
+	Expected login succesfully
+
+*** Keywords ***
+Expected login succesfully
+    Page Should Contain    Welcome Page
+    Page Should Contain Link   logout

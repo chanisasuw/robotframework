@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20140729 15:58:00.486" generator="Robot 2.8.5 (Python 2.7.5 on darwin)">
+<suite source="/Users/macbook/Robot/testcase/demologin.txt" id="s1" name="Demologin">
+<test id="s1-t1" name="Login to website">
+<kw type="kw" name="demo_login_resource.Go to login page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20140729 15:58:00.805" level="INFO">Opening browser 'firefox' to base url 'http://localhost:7272/html/'</msg>
+<status status="PASS" endtime="20140729 15:58:06.923" starttime="20140729 15:58:00.804"></status>
+</kw>
+<status status="PASS" endtime="20140729 15:58:06.925" starttime="20140729 15:58:00.803"></status>
+</kw>
+<kw type="kw" name="demo_login_resource.Fill in data login">
+<doc></doc>
+<arguments>
+<arg>demo</arg>
+<arg>mode</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username_field</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20140729 15:58:06.929" level="INFO">Typing text 'demo' into text field 'username_field'</msg>
+<status status="PASS" endtime="20140729 15:58:07.121" starttime="20140729 15:58:06.928"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password_field</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20140729 15:58:07.123" level="INFO">Typing text 'mode' into text field 'password_field'</msg>
+<status status="PASS" endtime="20140729 15:58:07.213" starttime="20140729 15:58:07.122"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@type='submit']</arg>
+</arguments>
+<msg timestamp="20140729 15:58:07.214" level="INFO">Clicking element 'xpath=//input[@type='submit']'.</msg>
+<status status="PASS" endtime="20140729 15:58:07.463" starttime="20140729 15:58:07.214"></status>
+</kw>
+<status status="PASS" endtime="20140729 15:58:07.464" starttime="20140729 15:58:06.926"></status>
+</kw>
+<kw type="kw" name="Expected login succesfully">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Welcome Page</arg>
+</arguments>
+<msg timestamp="20140729 15:58:07.491" level="INFO">Current page contains text 'Welcome Page'.</msg>
+<status status="PASS" endtime="20140729 15:58:07.491" starttime="20140729 15:58:07.466"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Page Should Contain Link">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>logout</arg>
+</arguments>
+<msg timestamp="20140729 15:58:07.519" level="INFO">Current page contains link 'logout'.</msg>
+<status status="PASS" endtime="20140729 15:58:07.520" starttime="20140729 15:58:07.491"></status>
+</kw>
+<status status="PASS" endtime="20140729 15:58:07.520" starttime="20140729 15:58:07.464"></status>
+</kw>
+<kw type="teardown" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140729 15:58:07.620" starttime="20140729 15:58:07.521"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20140729 15:58:07.621" critical="yes" starttime="20140729 15:58:00.802"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20140729 15:58:07.624" starttime="20140729 15:58:00.487"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Demologin">Demologin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

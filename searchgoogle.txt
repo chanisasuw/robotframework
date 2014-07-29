@@ -1,0 +1,14 @@
+*** Settings ***
+Library    Selenium2Library
+
+
+*** Variables ***
+
+
+*** Testcases ***
+Search Google
+    Open Browser    http://www.google.com
+    Input Text    q    Robot Framework
+    Click Element    xpath=//button[@id='gbqfb']
+    Close Browser
+
