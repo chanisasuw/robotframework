@@ -1,6 +1,6 @@
 *** Settings ***
 Library    Selenium2Library
-Resource    ./resource/demo_login_resource.txt
+Resource    ../resource/demo_login_resource.txt
 
 *** Variables ***
 

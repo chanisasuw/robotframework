@@ -1,7 +1,7 @@
 *** Settings ***
 Library    Selenium2Library
 Test Teardown    Close Browser
-Resource    ./resource/demo_login_resource.txt
+Resource    ../resource/demo_login_resource.txt
 
 *** Variables ***
 

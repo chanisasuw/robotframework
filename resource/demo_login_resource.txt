@@ -1,5 +1,5 @@
 *** Variables ***
-${url}   http://localhost:7272/html/
+${url}   https://www.facebook.com
 
 *** Keywords ***
 Go to login page
@@ -7,6 +7,6 @@ Go to login page
 
 Fill in data login
 	[Arguments]    ${username}    ${password}
-	Input Text    username_field    ${username}
-    Input Text    password_field    ${password}
+	Input Text    email    ${username}
+    Input Text    pass    ${password}
     Click Element    xpath=//input[@type='submit']
